@@ -3,10 +3,10 @@
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 
 on post-fs
+    wait /dev/qseecom
     start vendor.qseecomd
 
 service vendor.qseecomd /vendor/bin/qseecomd
-    shutdown critical
     class core
     user root
     group root
